@@ -1,5 +1,12 @@
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import Ejercicios.contorllers.Laberinto;
+import Ejercicios.models.Celda;
+
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -30,7 +37,7 @@ public class App {
 
         
         /// Ejericio 1
-        // runEjercicio();
+        runEjercicio();
 
     }
 
@@ -80,13 +87,15 @@ public class App {
     }
 
     public static void runEjercicio() {
-
-        // boolean[][] grid = {
-        // { true, true, true, true },
-        // { false, false, false, true },
-        // { true, true, false, true },
-        // { true, true, false, true }
-        // };
-
+        Laberinto lab=new Laberinto();
+        boolean[][] grid = {
+        { true, true, true, true },
+        { false, false, false, true },
+        { true, true, false, true },
+        { true, true, false, true }
+        };
+        List<Celda> path = lab.getPath(grid);
+        System.out.println("El recrio en :"+lab.getPath(grid) );
+        
     }
 }
